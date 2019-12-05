@@ -7,8 +7,8 @@ import {
   Card,
   Button
 } from "semantic-ui-react";
-import Document from "./document";
-import NewDocumentModal from "./newDocumentModal";
+import Document from "./documents_cmpnts/document";
+import NewDocumentModal from "./documents_cmpnts/newDocumentModal";
 
 export default class Documents extends React.Component {
   constructor(props) {

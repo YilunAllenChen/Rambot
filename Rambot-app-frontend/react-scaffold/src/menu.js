@@ -20,7 +20,7 @@ export default class NavMenu extends React.Component {
     const { activeItem } = this.state;
     return (
       <Container>
-        <Image centered src={require("./logo.svg")} size="small"></Image>
+        <Image centered src={require("./assets/logo.svg")} size="small"></Image>
         <Menu vertical style={{ width: "100%" }}>
           <Menu.Item
             name="Dashboard"

@@ -31,7 +31,7 @@ export default class About extends React.Component {
                 </p>
                 <Image
                   centered
-                  src={require("./mongodb-logo.png")}
+                  src={require("../assets/mongodb-logo.png")}
                   size="small"
                 ></Image>
               </Segment>
@@ -43,7 +43,7 @@ export default class About extends React.Component {
                 </p>
                 <Image
                   centered
-                  src={require("./flask-logo.jpg")}
+                  src={require("../assets/flask-logo.jpg")}
                   size="small"
                 ></Image>
               </Segment>
@@ -55,7 +55,7 @@ export default class About extends React.Component {
                 </p>
                 <Image
                   centered
-                  src={require("./react-logo.png")}
+                  src={require("../assets/react-logo.png")}
                   size="small"
                 ></Image>
               </Segment>

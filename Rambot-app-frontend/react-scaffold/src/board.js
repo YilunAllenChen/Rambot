@@ -1,8 +1,8 @@
 import React from "react";
-import Collections from "./collections";
-import Dashboard from "./dashboard";
-import Documents from "./documents";
-import About from "./about";
+import Collections from "./modules/collections";
+import Dashboard from "./modules/dashboard";
+import Documents from "./modules/documents";
+import About from "./modules/about";
 
 export default class Board extends React.Component {
   constructor(props) {

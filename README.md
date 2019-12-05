@@ -38,3 +38,9 @@ If you wish to update your frontend to the backend, do:
 yarn build
 ```
 then copy all files under build files and put them into backend/'s UI_build folder.
+# Project Log
+ Date | Type | Details 
+- | - | -
+2019.12.4 | DEV | Architected the framework of the project. <br> - Backend powered by Electron.js <br> - Frontend powered by React.js / Vue.js
+2019.12.4 | DEV | Configed starter code <br> - React scaffold from my Flamongo project <br> - vue.js from vue-cli.
+
