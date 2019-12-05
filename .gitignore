@@ -1,5 +1,3 @@
-/Rambot-app-backend/dist
-/Rambot-app-backend/node_modules
-/Rambot-app-frontend/react_scaffold/node_modules/
-/Rambot-app-frontend/vue_scaffold/node_modules/
-
+/Rambot-app/dist
+/Rambot-app/build
+/Rambot-app/node_modules
