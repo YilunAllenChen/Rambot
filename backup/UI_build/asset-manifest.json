@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "./static/css/main.872db741.chunk.css",
+    "main.js": "./static/js/main.e20f7d4e.chunk.js",
+    "main.js.map": "./static/js/main.e20f7d4e.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8a551edd.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8a551edd.js.map",
+    "static/css/2.f21d97f4.chunk.css": "./static/css/2.f21d97f4.chunk.css",
+    "static/js/2.78ab13bf.chunk.js": "./static/js/2.78ab13bf.chunk.js",
+    "static/js/2.78ab13bf.chunk.js.map": "./static/js/2.78ab13bf.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.6e86e75952e4fe72732d5b97a71742e6.js": "./precache-manifest.6e86e75952e4fe72732d5b97a71742e6.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.f21d97f4.chunk.css.map": "./static/css/2.f21d97f4.chunk.css.map",
+    "static/css/main.872db741.chunk.css.map": "./static/css/main.872db741.chunk.css.map",
+    "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
+    "static/media/flask-logo.jpg": "./static/media/flask-logo.0e70abd5.jpg",
+    "static/media/logo.svg": "./static/media/logo.90d9a7f6.svg",
+    "static/media/react-logo.png": "./static/media/react-logo.260d5758.png"
+  }
+}
