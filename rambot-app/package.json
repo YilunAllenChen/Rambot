@@ -1,7 +1,7 @@
 {
   "name": "rambot-app",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "main.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -17,7 +17,7 @@
   },
   "homepage": "./",
   "scripts": {
-    "e-start": "react-scripts build && electron .",
+    "e-start": "electron .",
     "e-build": "electron-builder --dir",
     "start": "react-scripts start",
     "build": "react-scripts build",
