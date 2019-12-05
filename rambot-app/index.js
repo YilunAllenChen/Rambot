@@ -1,35 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
-const path = require('path')
-
-
-const fs = require('fs')
-const express = require('express');
-var bodyParser = require("body-parser");
-var moment = require('moment');
-moment().format();
-
-// Node.js setup
-const hostname = 'localhost';
-const node = express();
-const port = 32123;
-node.set('port', process.env.PORT || port);
-node.use(bodyParser.urlencoded({
-  extended: false
-}));
-node.use(bodyParser.json());
-node.use(express.static(__dirname)); //so that the file of res.sendFile can source another file.
-//let the node listen.
-node.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-  fs.writeFileSync("port_info.config", 'http://'+hostname+':'+port);
-});
-
-
-fs.readFile("port_info.config", "utf8",function(err, data){
-  console.log(data);
-});
-
+const {app, BrowserWindow} = require('electron');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -46,7 +16,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://'+__dirname+'/UI_build/index.html')
+  mainWindow.loadURL('file://'+__dirname+'/build/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
