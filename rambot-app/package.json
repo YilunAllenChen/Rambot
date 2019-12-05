@@ -15,8 +15,9 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
   },
+  "homepage": "./",
   "scripts": {
-    "e-start": "electron .",
+    "e-start": "react-scripts build && electron .",
     "e-build": "electron-builder --dir",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -41,5 +42,7 @@
   "devDependencies": {
     "electron": "^7.1.3",
     "electron-builder": "^21.2.0"
-  }
+  },
+  "author": "Allen Chen",
+  "description": "electron & react.js powered desktop"
 }
