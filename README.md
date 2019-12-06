@@ -35,5 +35,6 @@ yarn e-build
 # Project Log
  Date | Type | Details 
 - | - | -
-2019.12.4 | DEV | Architected the framework of the project. <br> - Backend powered by Electron.js <br> - Frontend powered by React.js
-2019.12.4 | DEV | Configed starter code <br> - React scaffold from my Flamongo project
+2019.12.4 | <font color='green'>DEV | Architected the framework of the project. <br> - Backend powered by Electron.js <br> - Frontend powered by React.js
+2019.12.4 | <font color='green'>DEV | Configed starter code <br> - React scaffold from my Flamongo project
+2019.12.5 | <font color='red'>BUG | Packager doesn't work.
