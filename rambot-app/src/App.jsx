@@ -7,7 +7,6 @@ import { Card, Grid, Sidebar, Segment, Menu } from "semantic-ui-react";
 const app_wrapper = {
   margin: 0,
   height: "100%",
-  textAlign: "center"
 };
 
 export default class App extends React.Component {
@@ -35,7 +34,7 @@ export default class App extends React.Component {
     this.state = {
       visible: false,
       active_left: "Dashboard",
-      active_right: ""
+      active_right: "Editor"
     };
   }
 

@@ -3,6 +3,7 @@ import Collections from "./components/collections";
 import Dashboard from "./components/dashboard";
 import Documents from "./components/documents";
 import About from "./components/about";
+import Editor from "./components/editor";
 
 export default class Board extends React.Component {
   constructor(props) {
@@ -32,6 +33,8 @@ export default class Board extends React.Component {
         );
       case "About":
         return <About></About>;
+      case "Editor":
+        return <Editor></Editor>;
       default:
         return <div></div>;
     }

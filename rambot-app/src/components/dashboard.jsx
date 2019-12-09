@@ -4,56 +4,90 @@ import {
   Container,
   Segment,
   Transition,
-  Image,
-  Button
+  Button,
+  Popup
 } from "semantic-ui-react";
 
 export default class DashBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
+      modules: []
     };
   }
 
-  toggleVisibility = () => {
-    this.setState(prevState => ({
-      visible: !prevState.visible
-    }));
+  addPowertrainModule = () => {
+    let { modules } = this.state;
+    modules.push({
+      name: "module_name",
+      id: Date.now().toString(10),
+      icon: "angle double up",
+      color: "blue",
+      visible: true,
+      content: "This is a powertrain module."
+    });
+    this.setState({ modules: modules });
+  };
+
+  addCoreModule = () => {
+    let { modules } = this.state;
+    modules.push({
+      name: "module_name",
+      id: Date.now().toString(10),
+      icon: "compress",
+      color: "red",
+      visible: true,
+      content: "This is a core module."
+    });
+    this.setState({ modules: modules });
   };
 
   render() {
-    let { visible } = this.state;
-    return (
-      <Container style={{ height: "100%" }}>
-        <Button
-          onClick={() => {
-            this.toggleVisibility();
-          }}
-        >
-          click
-        </Button>
-        <Segment style={{ top: "40%", border: "0px", boxShadow: "none" }}>
+    let { visible, modules } = this.state;
+    let modules_vis = [];
+    modules.forEach(module => {
+      modules_vis.push(
+        <div key={module.id}>
           <Transition
             duration={{ hide: 300, show: 800 }}
             visible={visible}
             unmountOnHide={true}
           >
-            <Image
-              centered
-              size="small"
-              src="https://react.semantic-ui.com/images/leaves/3.png"
+            <Popup
+              content={module.content}
+              on="click"
+              trigger={
+                <Icon.Group size="huge">
+                  <Icon size="big" name="expand" />
+                  <Icon name={module.icon} color={module.color} />
+                </Icon.Group>
+              }
             />
           </Transition>
-          <Icon.Group size="huge">
-            <Icon size="big" name="expand" />
-            <Icon name="compress" />
-          </Icon.Group>
-          <p />
-          <Icon.Group size="huge">
-            <Icon size="big" name="expand" />
-            <Icon name="compress" />
-          </Icon.Group>
+        </div>
+      );
+    });
+    
+    let vert_offset = (60 - modules_vis.length * 10).toString() + "%";
+    return (
+      <Container style={{ height: "100%", textAlign: "center" }}>
+        <Button
+          onClick={() => {
+            this.addCoreModule();
+          }}
+        >
+          Add Core
+        </Button>
+        <Button
+          onClick={() => {
+            this.addPowertrainModule();
+          }}
+        >
+          Add Powertrain
+        </Button>
+        <Segment style={{ top: vert_offset, border: "0px", boxShadow: "none" }}>
+          {modules_vis}
         </Segment>
       </Container>
     );

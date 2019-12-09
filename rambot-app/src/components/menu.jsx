@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Image, Menu, Sidebar } from "semantic-ui-react";
+import {Image, Menu, Sidebar } from "semantic-ui-react";
 
 
 
@@ -15,10 +15,22 @@ export default class VerticalSidebar extends React.Component {
 
   render() {
     let {visible, direction} = this.props;
+    let modules = ['Dashboard','Editor','Collections','Documents','Settings','About'];
+    let buttons = [];
+    modules.forEach(module => {
+      buttons.push(
+        <Menu.Item
+          name={module}
+          onClick={this.handleItemClick}
+          key={module}
+        >
+          {module}
+        </Menu.Item>)
+    });
     return (
       <Sidebar
         as={Menu}
-        animation='push'
+        animation='overlay'
         direction={direction}
         icon="labeled"
         inverted
@@ -32,39 +44,7 @@ export default class VerticalSidebar extends React.Component {
           src={require("../assets/logo.svg")}
           size="small"
         ></Image>
-        <Menu.Item
-          name="Dashboard"
-          onClick={this.handleItemClick}
-        >
-          Dashboard
-        </Menu.Item>
-        <Menu.Item
-          name="Collections"
-          onClick={this.handleItemClick}
-        >
-          Collections
-        </Menu.Item>
-        <Menu.Item
-          name="Documents"
-          onClick={this.handleItemClick}
-        >
-          Documents
-        </Menu.Item>
-        <Divider></Divider>
-
-        <Menu.Item
-          name="Setting"
-          onClick={this.handleItemClick}
-        >
-          Setting
-        </Menu.Item>
-
-        <Menu.Item
-          name="About"
-          onClick={this.handleItemClick}
-        >
-          About
-        </Menu.Item>
+        {buttons}
       </Sidebar>
     );
   }
